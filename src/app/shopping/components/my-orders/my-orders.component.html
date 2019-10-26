@@ -1,0 +1,23 @@
+<div class="card" *ngIf="myOrders$ | async as orders">
+    <div class="card-body">
+      <h2 class="card-title">My Orders</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Customer</th>
+            <th scope="col">Date</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let order of orders">
+          <tr>
+            <td>{{ order.shipping.name }}</td>
+            <td>{{ order.datePlaced | date }}</td>
+            <td><a [routerLink]="['/admin/orders/', order.$key]">View</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+
+    </div>
+</div>

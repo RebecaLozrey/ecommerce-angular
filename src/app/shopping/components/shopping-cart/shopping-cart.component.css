@@ -1,0 +1,15 @@
+.col-230 {
+    width: 230px;
+}
+
+.thumbnail{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background-size: cover;
+}
+
+
+.col-100 {
+    width: 100px;
+}
