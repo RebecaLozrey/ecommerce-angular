@@ -10,6 +10,8 @@ import { AdminOrdersComponent } from './components/admin-orders/admin-orders.com
 import { AdminProductsComponent } from './components/admin-products/admin-products.component';
 import { ProductFormComponent } from './components/product-form/product-form.component';
 import { AdminAuthGuardService } from './services/admin-auth-guard.service';
+import { UploadListComponent } from 'app/uploads/upload-list/upload-list.component';
+import { UploadFormComponent } from 'app/uploads/upload-form/upload-form.component';
 
 
 @NgModule({
@@ -51,6 +53,8 @@ import { AdminAuthGuardService } from './services/admin-auth-guard.service';
     AdminOrdersComponent,
     ProductFormComponent,
     ManageOrders,
+    UploadListComponent,
+    UploadFormComponent,
   ],
   providers: [
     AdminAuthGuardService,

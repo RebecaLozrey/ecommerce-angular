@@ -5,11 +5,14 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 import { CategoryService } from 'shared/services/category.service';
 import { ProductService } from 'shared/services/product.service';
+import { UploadFormComponent } from '../../../uploads/upload-form/upload-form.component';
+
 
 @Component({
   selector: 'app-product-form',
   templateUrl: './product-form.component.html',
-  styleUrls: ['./product-form.component.css']
+  styleUrls: ['./product-form.component.css'],
+  providers: [UploadFormComponent],
 })
 export class ProductFormComponent{
 
