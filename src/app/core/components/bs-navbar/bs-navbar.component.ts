@@ -11,7 +11,7 @@ import { ShoppingCart } from 'shared/models/shopping-cart';
   styleUrls: ['./bs-navbar.component.css']
 })
 export class BsNavbarComponent implements OnInit{
-  
+  logo:string = "../../../assets/images/logo150px.png";
   appUser: AppUser;
   cart$: Observable<ShoppingCart>;
 
