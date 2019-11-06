@@ -1,9 +1,9 @@
-<h2>Shipping</h2>
+<h2 class="pt-3">Shipping</h2>
   <div class="row" *ngIf="cart$ | async as cart">
-    <div class="col-6">
-    <shipping-form [cart]="cart"></shipping-form>
+    <div class="col-md-6 p-3">
+        <shipping-form [cart]="cart"></shipping-form>
     </div>
-    <div class="col-6">
-    <shopping-cart-summary [cart]="cart"></shopping-cart-summary>
+    <div class="col-md-6 p-3">
+        <shopping-cart-summary [cart]="cart"></shopping-cart-summary>
     </div>
   </div>

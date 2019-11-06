@@ -6,6 +6,11 @@ $primary-color: #c1d62e;
 
 body { padding-top: 0; }
 
+$custom-file-text: (
+  en: "Browse",
+  es: "Elegir"
+);
+
 .list-group-item.active {
     z-index: 2;
     color: #fff;

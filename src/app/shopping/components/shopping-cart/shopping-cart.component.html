@@ -1,20 +1,22 @@
-<h1>
-  Shopping Cart
+<h1 class="pt-4">
+  Carrito de Compras
 </h1>
 <div class="row col-10" *ngIf="cart$ | async as cart">
-  
-  <p>
-      You have {{cart.totalItemsCount}} products in your Shopping Cart.  
-      <button 
-        *ngIf="cart.items.length"
-        (click)="clearCart()"
-        class="btn btn-sm btn-ligth">Clear Shopping Cart</button>
-  </p>
-
+  <ul class="list-unstyled">
+  <li class="pt-3">
+      Cuentas con {{cart.totalItemsCount}} productos en tu carrito de compras.  
+  </li>
+  <li class="pt-3">
+      <button
+      *ngIf="cart.items.length"
+      (click)="clearCart()"
+      class="btn btn-sm btn-ligth">Limpiar Carrito</button>
+  </li>
+  </ul>
   
 
     <!-- Table -->
-    <table class="table">
+    <table class="table mt-3">
       <thead>
           <th class="text-center col-100"></th>
           <th>Product</th>

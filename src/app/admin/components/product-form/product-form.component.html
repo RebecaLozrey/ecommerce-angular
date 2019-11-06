@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-md-6">
+  <div class="col-md-6 pb-3">
     <form #f="ngForm" (ngSubmit)="save(f.value)">
 
       <div class="form-group">
@@ -40,10 +40,8 @@
               <div *ngIf="imageUrl.errors.url">Plear enter a valid URL</div>    
           </div>
       </div>
+
       <upload-form></upload-form>
-
-
-
 
       <button class="btn btn-primary">Save</button>
       <button type="button" (click)="delete()" class="btn btn-danger">Delete</button>
