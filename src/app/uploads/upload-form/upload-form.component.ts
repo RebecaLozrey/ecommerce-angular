@@ -13,6 +13,7 @@ export class UploadFormComponent{
 
   selectedFiles: FileList;
   currentUpload: Upload;
+  imageUrl: string;
 
   constructor(private upSvc: UploadService) { }
 
@@ -20,10 +21,12 @@ export class UploadFormComponent{
       this.selectedFiles = event.target.files;
   }
 
-  uploadSingle() {
+   async uploadSingle() {
     let file = this.selectedFiles.item(0)
     this.currentUpload = new Upload(file);
-    this.upSvc.pushUpload(this.currentUpload)
+    this.upSvc.pushUpload(this.currentUpload);
+    this.imageUrl = await this.upSvc.getImageUrl(this.currentUpload);
+    console.log(this.imageUrl);
   }
 
   uploadMulti() {

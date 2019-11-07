@@ -13,6 +13,12 @@ export class UploadService {
 
   uploads: FirebaseListObservable<Upload[]>;
   
+  getImageUrl(upload: Upload){
+    let storageRef = firebase.storage().ref();
+    let imageUrl = storageRef.child(`${this.basePath}/${upload.file.name}`);
+    return imageUrl.getDownloadURL();
+  }
+
   pushUpload(upload: Upload) {
     let storageRef = firebase.storage().ref();
     let uploadTask = storageRef.child(`${this.basePath}/${upload.file.name}`).put(upload.file);
