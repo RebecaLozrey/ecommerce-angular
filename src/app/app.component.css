@@ -1,0 +1,12 @@
+@media (max-width:767px) {
+    .top-margin {
+        margin-top: 10%;
+    }
+}
+
+@media (min-width:768px){
+    .top-margin {
+        margin-top: 10%;
+    }
+}
+
