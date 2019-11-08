@@ -19,6 +19,7 @@ export class ProductFormComponent{
   categories$: Observable<any>; //observable array of objects in time
   product: any = {};
   id: any;
+  iUrl: string = "";
 
   constructor(
     private route: ActivatedRoute,
@@ -31,6 +32,12 @@ export class ProductFormComponent{
     // when the id is ready call the get method
     //take method gets one then unsuscribes
     if (this.id) this.productService.get(this.id).take(1).subscribe( p => this.product = p );
+  }
+
+
+  setImageUrl(event){
+    console.log("from setImageField", event);
+    this.product.imageUrl = event;
   }
 
   save(product){

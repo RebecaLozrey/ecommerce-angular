@@ -31,7 +31,7 @@
         </select>
         <div *ngIf="category.touched && category.invalid" class="alert alert-danger"> Category is Required </div>
       </div>
-      <div class="form-group">
+      <div class="form-group d-none"> <!--d-none-->
           <label for="imageUrl">Image URL</label>
           <input #imageUrl="ngModel" imageUrl="ngModel" [(ngModel)]="product.imageUrl" 
           name="imageUrl" id="imageUrl" type="text" class="form-control" required url>
@@ -41,7 +41,7 @@
           </div>
       </div>
 
-      <upload-form></upload-form>
+      <upload-form (urlEmitter)="setImageUrl($event)"></upload-form>
 
       <button class="btn btn-primary">Save</button>
       <button type="button" (click)="delete()" class="btn btn-danger">Delete</button>

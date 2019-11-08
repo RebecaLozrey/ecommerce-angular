@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output} from '@angular/core';
 import { UploadService } from '../shared/upload.service';
 import { Upload } from '../shared/upload';
 import * as _ from "lodash";
@@ -14,6 +14,7 @@ export class UploadFormComponent{
   selectedFiles: FileList;
   currentUpload: Upload;
   imageUrl: string;
+  @Output() urlEmitter = new EventEmitter();
 
   constructor(private upSvc: UploadService) { }
 
@@ -26,7 +27,9 @@ export class UploadFormComponent{
     this.currentUpload = new Upload(file);
     this.upSvc.pushUpload(this.currentUpload);
     this.imageUrl = await this.upSvc.getImageUrl(this.currentUpload);
+    console.log("imageUrl from upload-form component");
     console.log(this.imageUrl);
+    this.urlEmitter.emit(this.imageUrl);
   }
 
   uploadMulti() {
