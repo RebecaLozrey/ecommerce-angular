@@ -4,6 +4,41 @@
 }
 
 
-.w-7{
-  width: 7%;
+
+
+
+/* SMARTPHONES PORTRAIT */
+@media only screen and (min-width: 0px) {
+
+  .w-7{
+    width: 15%;
+  }
+
 }
+
+/* SMARTPHONES LANDSCAPE */
+@media only screen and (min-width: 480px) {
+  
+  .w-7{
+    width: 15%;
+  }
+
+}
+
+/* TABLETS PORTRAIT */
+@media only screen and (min-width: 768px) {
+
+  .w-7{
+    width: 9%;
+  }
+}
+
+
+/* TABLET LANDSCAPE / DESKTOP */
+@media only screen and (min-width: 1024px) {
+
+  .w-7{
+    width: 9%;
+  }
+
+}    

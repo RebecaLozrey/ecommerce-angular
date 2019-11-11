@@ -1,12 +1,35 @@
-@media (max-width:767px) {
+/* SMARTPHONES PORTRAIT */
+@media only screen and (min-width: 300px) {
+
+    .top-margin {
+        margin-top: 13%;
+    }
+
+}
+
+/* SMARTPHONES LANDSCAPE */
+@media only screen and (min-width: 480px) {
+    
+    .top-margin {
+        margin-top: 13%;
+    }
+
+}
+
+/* TABLETS PORTRAIT */
+@media only screen and (min-width: 768px) {
+
     .top-margin {
         margin-top: 10%;
     }
 }
 
-@media (min-width:768px){
+
+/* TABLET LANDSCAPE / DESKTOP */
+@media only screen and (min-width: 1024px) {
+
     .top-margin {
         margin-top: 10%;
     }
-}
 
+}    

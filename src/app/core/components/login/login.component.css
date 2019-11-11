@@ -1,0 +1,40 @@
+/* SMARTPHONES PORTRAIT */
+@media only screen and (min-width: 200px) {
+
+    .top-margin {
+        margin-top: 13%;
+    }
+
+    .custom-display-x{
+        font-size: 1.8rem;
+    }
+
+}
+
+/* SMARTPHONES LANDSCAPE */
+@media only screen and (min-width: 480px) {
+    
+    .top-margin {
+        margin-top: 13%;
+    }
+
+}
+
+/* TABLETS PORTRAIT */
+@media only screen and (min-width: 768px) {
+
+    .top-margin {
+        margin-top: 10%;
+
+    }
+}
+
+
+/* TABLET LANDSCAPE / DESKTOP */
+@media only screen and (min-width: 1024px) {
+
+    .top-margin {
+        margin-top: 10%;
+    }
+
+}    

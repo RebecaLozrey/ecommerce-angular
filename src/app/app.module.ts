@@ -26,6 +26,7 @@ import { ShoppingModule } from './shopping/shopping.module';
     ShoppingModule,
     SharedModule,
     BrowserModule,
+
     //Module called just one no need to share it
     AngularFireModule.initializeApp(environment.firebase),
 
