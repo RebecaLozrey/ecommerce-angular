@@ -16,6 +16,7 @@ import { CoreModule } from './core/core.module';
 import { ProductsComponent } from './shopping/components/products/products.component';
 import { ShoppingModule } from './shopping/shopping.module';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +27,7 @@ import { ShoppingModule } from './shopping/shopping.module';
     ShoppingModule,
     SharedModule,
     BrowserModule,
+    
 
     //Module called just one no need to share it
     AngularFireModule.initializeApp(environment.firebase),
